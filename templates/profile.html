@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<h2>Profiel</h2>
+<div>
+    <p>Account gegevens:</p>
+    <table>
+        <tr>
+            <td>Gebruikersnaam:</td>
+            <td>{{ account['username'] }}</td>
+        </tr>
+        <tr>
+            <td>Wachtwoord:</td>
+            <td>******</td>
+        </tr>
+        <tr>
+            <td>E-mail:</td>
+            <td>{{ account['email'] }}</td>
+        </tr>
+    </table>
+</div>
+<div>
+    <p>Persoonsgegevens:</p>
+    <table>
+        <tr>
+            <td>Voornaam:</td>
+            <td>Klaas</td>
+        </tr>
+        <tr>
+            <td>Achternaam:</td>
+            <td>de Jong</td>
+        </tr>
+        <tr>
+            <td>Onderwijs:</td>
+            <td> - </td>
+        </tr>
+        <tr>
+            <td>Klas:</td>
+            <td> - </td>
+        </tr>
+        <tr>
+            <td>Gewicht:</td>
+            <td> 50 kg</td>
+        </tr>
+        <tr>
+            <td>Leeftijd:</td>
+            <td> 12 jaar</td>
+        </tr>
+        <tr>
+            <td>Lengte:</td>
+            <td> 170 cm</td>
+        </tr>
+    </table>
+</div>
+{% endblock %}
