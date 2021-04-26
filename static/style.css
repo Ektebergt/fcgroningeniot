@@ -69,7 +69,7 @@ body {
     background-color: #60b930;
     color: #ffffff;
 }
-.login form input[type="password"], .login form input[type="text"], .login form input[type="email"], .register form input[type="password"], .register form input[type="text"], .register form input[type="email"],.register form input[type="geboortedatum"], .register form input[type="lengte"], .register form input[type="gewicht"], .register form input[type="klasid"] {
+.login form input[type="password"], .login form input[type="text"], .login form input[type="email"], .register form input[type="password"], .register form input[type="text"], .register form input[type="number"], .register form input[type="email"], .register form input[type="date"] {
     width: 310px;
     height: 50px;
     border: 1px solid #dee0e4;
@@ -160,3 +160,36 @@ body.loggedin {
   margin: 0 0 10px 0;
 }
 
+.firstname {
+    width: 220px;
+    height: 30px;
+    border: 1px solid #dee0e4;
+    margin-left: 63px;
+    padding: 0 15px;
+}
+
+.lastname{
+    width: 220px;
+    height: 30px;
+    border: 1px solid #dee0e4;
+    margin-left: 50px;
+    padding: 0 15px;
+}
+
+.containertest input[type="submit"]{
+    width: 100px;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #3c8315;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+    border-radius: 5px;
+}
+
+.containertest input[type="submit"]:hover{
+    background-color: #48772f;
+    transition: background-color 0.2s;
+}

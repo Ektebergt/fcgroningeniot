@@ -21,37 +21,26 @@
         </tr>
     </table>
 </div>
-<div>
+<div class="containertest">
     <p>Persoonsgegevens:</p>
     <table>
         <tr>
-            <td>Voornaam:</td>
-            <td>Klaas</td>
-        </tr>
-        <tr>
-            <td>Achternaam:</td>
-            <td>de Jong</td>
-        </tr>
-        <tr>
-            <td>Onderwijs:</td>
-            <td> - </td>
-        </tr>
-        <tr>
             <td>Klas:</td>
-            <td> - </td>
+            <td>{{ account['classid'] }}</td>
         </tr>
         <tr>
             <td>Gewicht:</td>
-            <td> 50 kg</td>
+            <td>{{ account['weight'] }}</td>
         </tr>
         <tr>
             <td>Leeftijd:</td>
-            <td> 12 jaar</td>
+            <td>{{ account['dateofbirth']}}</td>
         </tr>
         <tr>
             <td>Lengte:</td>
-            <td> 170 cm</td>
+            <td>{{ account['length'] }}</td>
         </tr>
     </table>
-</div>
+    <input type="submit" value="Wijzigen">
+    </div>
 {% endblock %}

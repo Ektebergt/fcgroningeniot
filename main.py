@@ -39,7 +39,7 @@ def login():
             session['id'] = account['id']
             session['username'] = account['username']
             # Redirect to home page
-            return redirect(url_for('home'))
+            return redirect(url_for('profile'))
         else:
             # Account doesnt exist or username/password incorrect
             msg = 'Onjuiste gebruikersnaam/wachtwoord!'
@@ -61,10 +61,14 @@ def register():
     # Output message if something goes wrong...
     msg = ''
     # Check if "username", "password" and "email" POST requests exist (user submitted form)
-    if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'email' in request.form:
+    if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'email' in request.form and 'dateofbirth' in request.form and 'length' in request.form and 'weight' in request.form and 'classid' in request.form:
         # Create variables for easy access
         username = request.form['username']
         password = request.form['password']
+        dateofbirth = request.form['dateofbirth']
+        length = request.form['length']
+        weight = request.form['weight']
+        classid = request.form['classid']
         email = request.form['email']
                 # Check if account exists using MySQL
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
@@ -81,7 +85,7 @@ def register():
             msg = 'Gelieve het formulier in te vullen!'
         else:
             # Account doesnt exists and the form data is valid, now insert new account into accounts table
-            cursor.execute('INSERT INTO accounts VALUES (NULL, %s, %s, %s)', (username, password, email,))
+            cursor.execute('INSERT INTO accounts VALUES (NULL, %s, %s, %s, %s, %s, %s, %s)', (username, password, email, dateofbirth, length, weight, classid,))
             mysql.connection.commit()
             msg = 'Je hebt je succesvol geregistreerd!'
     elif request.method == 'POST':
